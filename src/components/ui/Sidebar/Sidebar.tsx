@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Stack from "../Stack";
 import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
 import ListItem from "./ListItem";
@@ -13,16 +14,26 @@ const Sidebar = () => {
               <h4 className="text-secondary font-bold px-3">{menu.title}</h4>
               <Stack as="ul">
                 {menu.content.map((item: ISidebarList) => (
-                  <ListItem key={item.id} icon={item.icon}>
-                    {item.title}
-                  </ListItem>
+                  <Button variant="unstyled">
+                    <ListItem key={item.id} icon={item.icon}>
+                      {item.title}
+                    </ListItem>
+                  </Button>
                 ))}
               </Stack>
             </div>
           ))}
         </Stack>
         <Stack>
-          <ListItem icon="🐱‍👤">Karim .Dev</ListItem>
+          <Button
+            variant="secondary"
+            size="large"
+            onClick={() => {
+              window?.open("https://github.com/kareemegy", "_blank")?.focus();
+            }}
+          >
+            🐱‍👤 Karim.dev
+          </Button>
         </Stack>
       </Stack>
     </aside>

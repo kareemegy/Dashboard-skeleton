@@ -1,25 +1,41 @@
 import cn from "classnames";
+
+type IOptionalVariants =
+  | {
+      variant: "unstyled";
+      size?: never;
+    }
+  | {
+      variant: "primary" | "secondary";
+      size: "large" | "medium" | "small";
+    };
+
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
-  variant: "primary" | "secondary";
-  size: "large" | "medium" | "small";
 }
 
-const rootStyle = "flex w-full h-full";
+const rootStyle = "flex-inline w-full h-full";
 
 const variants = {
-  primary: "bg-primary hover:contrast-50 filter text-black",
-  secondary: "bg-secondary hover:contrast-50 text-black",
+  primary: "bg-primary hover:contrast-125 filter text-black",
+  secondary: "bg-secondary hover:contrast-125 text-white",
+  unstyled: "",
 };
 
 const sizes = {
-  large: "h-16 w-16",
-  medium: "h-14 w-14",
-  small: "h-12 w-12",
+  large: "h-16 w-16 font-medium p-4 text-lg",
+  medium: "h-14 w-14 font-medium px-3 py-4 text-lg",
+  small: "h-12 w-12 p-2",
 };
 
-const Button = ({ children, className, variant, size, ...rest }: IButton) => {
+const Button = ({
+  children,
+  className,
+  variant,
+  size,
+  ...rest
+}: IButton & IOptionalVariants) => {
   const root = cn(rootStyle, variant && variants[variant], size && sizes[size]);
   return (
     <button className={cn(root, className)} {...rest}>
