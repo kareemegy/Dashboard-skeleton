@@ -6,12 +6,13 @@ import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
 import ListItem from "./ListItem";
 
 // shrinked: 44px, open: 240px
+// header height: 56px
 const Sidebar = () => {
   const [isShrunk, setShrunk] = useState(false);
   return (
     <aside
       className={cn(
-        "fixed flex flex-col w-[240px] h-screen bg-primary py-10 transition-all duration-300",
+        "relative flex flex-col w-[240px] h-[calc(100vh-56px)] bg-primary py-10 transition-all border-r-2 border-neutral duration-300",
         {
           "!w-[44px]": isShrunk,
         }
