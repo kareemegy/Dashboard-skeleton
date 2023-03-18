@@ -46,7 +46,7 @@ const Sidebar = () => {
           {SIDEBAR_MENUS.map((menu: ISidebarMenu) => (
             <div key={menu.id}>
               <h4
-                className={cn("text-secondary font-semibold px-3", {
+                className={cn("text-secondary font-semibold px-3 mb-2", {
                   "opacity-0 invisible": isShrunk,
                   "opacity-100 delay-200": !isShrunk,
                 })}
@@ -83,7 +83,7 @@ const Sidebar = () => {
           >
             <div className="flex space-x-3">
               <span>🐱‍👤</span>
-              {!isShrunk && <span>Karim.co</span>}
+              {!isShrunk && <span>Karim</span>}
             </div>
           </Button>
         </Stack>
