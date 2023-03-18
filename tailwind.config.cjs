@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#570DF8",
-        secondary: "#F000B8",
-        accent: "#37CDBE",
-        neutral: "#3D4451",
-        info: "#3ABFF8",
-        success: "#36D399",
-        warning: "#FBBD23",
-        error: "#F87272",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        neutral: "var(--neutral)",
+        info: "var(--info)",
+        success: "var(--success)",
+        warning: "var(--warning)",
+        error: "var(--error)",
       },
       minHeight: {
         6: "1.5rem",

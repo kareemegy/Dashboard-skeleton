@@ -1,5 +1,6 @@
 import cn from "classnames";
 import { useState } from "react";
+import { useUI } from "../../../contexts";
 import Button from "../Button";
 import Stack from "../Stack";
 import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
@@ -8,7 +9,11 @@ import ListItem from "./ListItem";
 // shrinked: 44px, open: 240px
 // header height: 56px
 const Sidebar = () => {
-  const [isShrunk, setShrunk] = useState(false);
+  const {
+    isSidebarShrunk: isShrunk,
+    setSidebarShrunk: setShrunk,
+    theme,
+  } = useUI();
   return (
     <aside
       className={cn(
@@ -47,9 +52,10 @@ const Sidebar = () => {
           {SIDEBAR_MENUS.map((menu: ISidebarMenu) => (
             <div key={menu.id}>
               <h4
-                className={cn("text-secondary font-semibold px-3 mb-2", {
+                className={cn("text-secondary font-bold px-3 mb-2", {
                   "opacity-0 invisible": isShrunk,
                   "opacity-100 delay-200": !isShrunk,
+                  "text-gray-500": theme === "dark",
                 })}
               >
                 {menu.title}

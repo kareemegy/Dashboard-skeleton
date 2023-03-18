@@ -1,1 +1,21 @@
-/* TBD */
+:root {
+  --primary: #570df8;
+  --secondary: #f000b8;
+  --accent: #37cdbe;
+  --neutral: #3d4451;
+  --info: #3abff8;
+  --success: #36d399;
+  --warning: #fbbd23;
+  --error: #f87272;
+}
+
+[theme="dark"] {
+  --primary: #9e0000;
+  --secondary: #090404;
+  --accent: #343232;
+  --neutral: #666666;
+  --success: #008000;
+  --info: #0000ff;
+  --error: #ff0000;
+  --warning: #ffff00;
+}
