@@ -6,8 +6,8 @@ type IOptionalVariants =
       size?: never;
     }
   | {
-      variant: "primary" | "secondary";
-      size: "large" | "medium" | "small";
+      variant: "primary" | "secondary" | "neutral";
+      size: "large" | "medium" | "small" | "auto";
     };
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -20,13 +20,15 @@ const rootStyle = "flex-inline w-full h-full";
 const variants = {
   primary: "bg-primary hover:contrast-125 filter text-black",
   secondary: "bg-secondary hover:contrast-125 text-white",
+  neutral: "bg-neutral hover:contrast-125 text-white",
   unstyled: "",
 };
 
 const sizes = {
-  large: "h-16 w-16 font-medium p-4 text-lg",
-  medium: "h-14 w-14 font-medium px-3 py-4 text-lg",
-  small: "h-12 w-12 p-2",
+  large: "min-h-16 font-medium p-4 text-lg",
+  medium: "min-h-12 font-medium px-3 py-4 text-lg",
+  small: "min-h-10 p-2",
+  auto: "",
 };
 
 const Button = ({
