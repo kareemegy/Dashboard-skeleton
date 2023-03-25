@@ -10,7 +10,7 @@ const Header = () => {
         <Button
           variant="neutral"
           size="small"
-          className="rounded-md font-medium"
+          className="rounded-md font-medium "
           onClick={() => {
             toggleTheme();
           }}
@@ -21,5 +21,10 @@ const Header = () => {
     </div>
   );
 };
+
+
+
+
+
 
 export default Header;

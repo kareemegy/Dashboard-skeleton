@@ -6,8 +6,6 @@ import Stack from "../Stack";
 import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
 import ListItem from "./ListItem";
 
-// shrinked: 44px, open: 240px
-// header height: 56px
 const Sidebar = () => {
   const {
     isSidebarShrunk: isShrunk,
