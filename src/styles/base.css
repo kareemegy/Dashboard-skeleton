@@ -9,13 +9,25 @@
   --error: #f87272;
 }
 
-[theme="dark"] {
-  --primary: #9e0000;
-  --secondary: #090404;
+[data-theme="dark"] {
+  --primary: #635985;
+  --secondary: #443c68;
   --accent: #343232;
-  --neutral: #666666;
+  --neutral: #25222f;
   --success: #008000;
   --info: #0000ff;
   --error: #ff0000;
   --warning: #ffff00;
+  --background: var(--neutral);
+}
+[data-theme="light"] {
+  --primary: #19a7ce;
+  --secondary: #146c94;
+  --accent: #343232;
+  --neutral: #000000;
+  --success: #04ed8f;
+  --info: #495159;
+  --error: #ff0000;
+  --warning: #ffff00;
+  --background: #F6F1F1;
 }
