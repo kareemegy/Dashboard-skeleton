@@ -1,5 +1,5 @@
 .root {
-  @apply inline-flex w-full h-full;
+  @apply inline-block w-full h-full;
 }
 
 :root {
@@ -90,6 +90,12 @@
   background-color: var(--button-quad-hover-bg);
   color: var(--button-quad-hover-color);
   border-color: var(--button-quad-hover-border);
+}
+
+.unstyled {
+  background-color: transparent;
+  color: inherit;
+  border: none;
 }
 
 /* Sizes */

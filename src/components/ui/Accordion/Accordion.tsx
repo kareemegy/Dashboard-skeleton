@@ -43,7 +43,7 @@ const AccordionItem = ({ title, children, isActive, onClick }: IAccordion) => {
         className={cn(
           "px-4 py-2 bg-gray-300 transition-all duration-300 ease-in-out",
           {
-            "overflow-hidden py-0": !isActive,
+            "overflow-hidden !py-0": !isActive,
           }
         )}
         style={{ maxHeight: isActive ? maxHeightRef.current : 0 }}

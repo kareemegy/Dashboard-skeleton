@@ -6,6 +6,7 @@ import Stack from "../Stack";
 import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
 import ListItem from "./ListItem";
 import { Link } from "react-router-dom";
+import LinkItem from "../Button/LinkItem";
 
 const Sidebar = () => {
   const {
@@ -24,8 +25,8 @@ const Sidebar = () => {
     >
       <div className="absolute -right-5 w-fit">
         <Button
-          variant="neutral"
-          size="auto"
+          variant="primary"
+          size="sm"
           className="rounded-md text-white p-2.5"
           onClick={() => setShrunk(!isShrunk)}
         >
@@ -80,12 +81,12 @@ const Sidebar = () => {
           ))}
         </Stack>
         <Stack>
-          <Link to="/customize">
+          <LinkItem slug="/customize" variant="secondary" size="md">
             <div className="flex space-x-3">
               <span>🐱‍👤</span>
               {!isShrunk && <span>Customize</span>}
             </div>
-          </Link>
+          </LinkItem>
         </Stack>
       </Stack>
     </aside>
