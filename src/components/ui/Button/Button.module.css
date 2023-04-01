@@ -1,5 +1,6 @@
 .root {
-  @apply inline-block w-full h-full;
+  @apply inline-block w-full h-full
+  transition-all duration-200 ease-in-out;
 }
 
 :root {
