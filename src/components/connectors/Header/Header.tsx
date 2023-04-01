@@ -8,8 +8,8 @@ const Header = () => {
       <div>Karim</div>
       <div>
         <Button
-          variant="neutral"
-          size="small"
+          variant="primary"
+          size="sm"
           className="rounded-md font-medium "
           onClick={() => {
             toggleTheme();
@@ -21,10 +21,5 @@ const Header = () => {
     </div>
   );
 };
-
-
-
-
-
 
 export default Header;
