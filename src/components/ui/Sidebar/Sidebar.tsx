@@ -5,6 +5,7 @@ import Button from "../Button";
 import Stack from "../Stack";
 import { ISidebarList, ISidebarMenu, SIDEBAR_MENUS } from "./constants";
 import ListItem from "./ListItem";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const {
@@ -79,18 +80,12 @@ const Sidebar = () => {
           ))}
         </Stack>
         <Stack>
-          <Button
-            variant="secondary"
-            size="medium"
-            onClick={() => {
-              window?.open("https://github.com/kareemegy", "_blank")?.focus();
-            }}
-          >
+          <Link to="/customize">
             <div className="flex space-x-3">
               <span>🐱‍👤</span>
-              {!isShrunk && <span>Karim</span>}
+              {!isShrunk && <span>Customize</span>}
             </div>
-          </Button>
+          </Link>
         </Stack>
       </Stack>
     </aside>
