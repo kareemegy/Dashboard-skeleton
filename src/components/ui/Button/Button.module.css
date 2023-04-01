@@ -91,3 +91,77 @@
   color: var(--button-quad-hover-color);
   border-color: var(--button-quad-hover-border);
 }
+
+/* Sizes */
+
+:root {
+  --button-xl-min-height: 56;
+  --button-xl-min-width: 56;
+  --button-xl-font-size: 20;
+  --button-xl-font-width: 800;
+  --button-xl-padding-x: 28;
+  --button-xl-padding-y: 14;
+}
+
+:root {
+  --button-lg-min-height: 48;
+  --button-lg-min-width: 48;
+  --button-lg-font-size: 18;
+  --button-lg-font-width: 700;
+  --button-lg-padding-x: 24;
+  --button-lg-padding-y: 12;
+}
+
+:root {
+  --button-md-min-height: 40;
+  --button-md-min-width: 40;
+  --button-md-font-size: 16;
+  --button-md-font-width: 600;
+  --button-md-padding-x: 20;
+  --button-md-padding-y: 10;
+}
+
+:root {
+  --button-sm-min-height: 32;
+  --button-sm-min-width: 32;
+  --button-sm-font-size: 14;
+  --button-sm-font-width: 500;
+  --button-sm-padding-x: 16;
+  --button-sm-padding-y: 8;
+}
+
+.xl {
+  min-height: calc(var(--button-xl-min-height) * 1px);
+  min-width: calc(var(--button-xl-min-width) * 1px);
+  font-size: calc(var(--button-xl-font-size) * 1px);
+  font-weight: calc(var(--button-xl-font-width) * 1px);
+  padding-block: calc(var(--button-xl-padding-y) * 1px);
+  padding-inline: calc(var(--button-xl-padding-x) * 1px);
+}
+
+.lg {
+  min-height: calc(var(--button-lg-min-height) * 1px);
+  min-width: calc(var(--button-lg-min-width) * 1px);
+  font-size: calc(var(--button-lg-font-size) * 1px);
+  font-weight: calc(var(--button-lg-font-width) * 1px);
+  padding-block: calc(var(--button-lg-padding-y) * 1px);
+  padding-inline: calc(var(--button-lg-padding-x) * 1px);
+}
+
+.md {
+  min-height: calc(var(--button-md-min-height) * 1px);
+  min-width: calc(var(--button-md-min-width) * 1px);
+  font-size: calc(var(--button-md-font-size) * 1px);
+  font-weight: calc(var(--button-md-font-width) * 1px);
+  padding-block: calc(var(--button-md-padding-y) * 1px);
+  padding-inline: calc(var(--button-md-padding-x) * 1px);
+}
+
+.sm {
+  min-height: calc(var(--button-sm-min-height) * 1px);
+  min-width: calc(var(--button-sm-min-width) * 1px);
+  font-size: calc(var(--button-sm-font-size) * 1px);
+  font-weight: calc(var(--button-sm-font-width) * 1px);
+  padding-block: calc(var(--button-sm-padding-y) * 1px);
+  padding-inline: calc(var(--button-sm-padding-x) * 1px);
+}

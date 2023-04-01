@@ -3,24 +3,9 @@ import Stack from "../../../components/ui/Stack";
 import Accordion from "../../../components/ui/Accordion";
 import ButtonVariant from "./Variants/ButtonVariant";
 import Previewer from "../Utils/Previewer";
+import ButtonSize from "./Sizes/ButtonSize";
 
 const ButtonGenerator = () => {
-  const [variantProps, setVariantProps] = useState({
-    background: "#ffffff",
-    color: "#000000",
-    border: {
-      color: "#000000",
-      width: "1px",
-    },
-    hover: {
-      background: "#ffffff",
-      color: "#000000",
-      border: {
-        color: "#000000",
-        width: "1px",
-      },
-    },
-  });
   const [sizeProps, setSizeProps] = useState({
     minWidth: "0",
     minHeight: "0",
@@ -31,7 +16,7 @@ const ButtonGenerator = () => {
   return (
     <div className="flex flex-col w-full h-full border-2 border-primary p-5 space-y-10">
       <Stack>
-        <h2 className="text-black font-bold text-2xl">Variants</h2>
+        <h3 className="text-black font-bold text-xl">Variants</h3>
         <Accordion>
           <Accordion.Item title="Primary">
             <ButtonVariant name="primary" />
@@ -48,71 +33,21 @@ const ButtonGenerator = () => {
         </Accordion>
       </Stack>
       <Stack>
-        <h2 className="text-black font-bold text-2xl">Sizes</h2>
-        <div className="grid grid-cols-2 gap-5 place-items-center">
-          <Stack className="space-y-4">
-            <Stack className="border-2 border-gray-400 p-4">
-              <Stack>
-                <label htmlFor="minWidth">Min width</label>
-                <input
-                  id="minWidth"
-                  type="number"
-                  value={sizeProps.minWidth}
-                  onChange={(e) =>
-                    setSizeProps({ ...sizeProps, minWidth: e.target.value })
-                  }
-                />
-              </Stack>
-              <Stack>
-                <label htmlFor="minHeight">Min Height</label>
-                <input
-                  id="minHeight"
-                  type="number"
-                  value={sizeProps.minHeight}
-                  onChange={(e) =>
-                    setSizeProps({ ...sizeProps, minHeight: e.target.value })
-                  }
-                />
-              </Stack>
-              <Stack>
-                <label htmlFor="padding">Padding</label>
-                <input
-                  id="padding"
-                  type="number"
-                  value={sizeProps.padding}
-                  onChange={(e) =>
-                    setSizeProps({ ...sizeProps, padding: e.target.value })
-                  }
-                />
-              </Stack>
-              <Stack>
-                <label htmlFor="font_weight">Font Weight</label>
-                <input
-                  id="font_weight"
-                  type="number"
-                  value={sizeProps.fontWeight}
-                  onChange={(e) =>
-                    setSizeProps({ ...sizeProps, fontWeight: e.target.value })
-                  }
-                />
-              </Stack>
-            </Stack>
-          </Stack>
-          <Previewer>
-            <button
-              style={{
-                background: "white",
-                minWidth: `${sizeProps.minWidth}px`,
-                minHeight: `${sizeProps.minHeight}px`,
-                padding: `${sizeProps.padding}px`,
-                fontWeight: sizeProps.fontWeight,
-                fontSize: `${sizeProps.fontSize}px`,
-              }}
-            >
-              hello world
-            </button>
-          </Previewer>
-        </div>
+        <h3 className="text-black font-bold text-xl">Sizes</h3>
+        <Accordion>
+          <Accordion.Item title="X-large">
+            <ButtonSize name="xl" />
+          </Accordion.Item>
+          <Accordion.Item title="Large">
+            <ButtonSize name="lg" />
+          </Accordion.Item>
+          <Accordion.Item title="Medium">
+            <ButtonSize name="md" />
+          </Accordion.Item>
+          <Accordion.Item title="Small">
+            <ButtonSize name="sm" />
+          </Accordion.Item>
+        </Accordion>
       </Stack>
     </div>
   );

@@ -28,9 +28,10 @@ const initSize = (name: Sizes) => {
     [name]: {
       minWidth: "0",
       minHeight: "0",
-      padding: "0",
       fontWeight: "400",
       fontSize: "16",
+      paddingX: "0",
+      paddingY: "0",
     },
   };
 };
@@ -53,12 +54,13 @@ export type Variants = "primary" | "secondary" | "tertiary" | "quad";
 interface ISize {
   minWidth: string;
   minHeight: string;
-  padding: string;
   fontWeight: string;
   fontSize: string;
+  paddingX: string;
+  paddingY: string;
 }
 
-type Sizes = "sm" | "md" | "lg" | "xl";
+export type Sizes = "sm" | "md" | "lg" | "xl";
 
 interface IThemeGeneratorContext {
   variants: Record<Variants, IVariant>;
